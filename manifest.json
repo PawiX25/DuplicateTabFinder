@@ -33,5 +33,10 @@
     "close_all_duplicates": {
       "description": "Close all duplicate tabs"
     }
+  },
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "pawix@pawix.dev"
+    }
   }
 }
