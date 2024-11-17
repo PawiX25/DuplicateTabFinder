@@ -335,4 +335,19 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     chrome.tabs.query({}, handleTabs);
+
+    function updateShortcutsDisplay() {
+        const shortcutsList = document.getElementById('shortcuts-list');
+        chrome.commands.getAll(commands => {
+            shortcutsList.innerHTML = commands
+                .map(cmd => {
+                    const shortcut = cmd.shortcut || 'Not set';
+                    const description = cmd.description;
+                    return `${description}: <b>${shortcut}</b><br>`;
+                })
+                .join('');
+        });
+    }
+
+    updateShortcutsDisplay();
 });

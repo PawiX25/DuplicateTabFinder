@@ -10,9 +10,9 @@
     "downloads"
   ],
   "host_permissions": ["<all_urls>"],
-"background": {
-  "scripts": ["background.js"]
-},
+  "background": {
+    "scripts": ["background.js"]
+  },
   "action": {
     "default_popup": "popup.html",
     "default_icon": {
@@ -28,15 +28,9 @@
   },
   "commands": {
     "_execute_action": {
-      "suggested_key": {
-        "default": "Alt+K"
-      },
-      "description": "Toggle duplicate tab finder"
+      "description": "Open duplicate tab finder"
     },
     "close_all_duplicates": {
-      "suggested_key": {
-        "default": "Alt+C"
-      },
       "description": "Close all duplicate tabs"
     }
   }
